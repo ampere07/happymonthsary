@@ -1,0 +1,90 @@
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.game-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  max-width: 100%;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.game-header h1 {
+  color: #1a1a2e;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.game-header p {
+  color: #666;
+  font-size: 1em;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .App {
+    padding: 5px;
+    justify-content: flex-start;
+    padding-top: 10px;
+    overflow-y: auto;
+  }
+
+  .game-container {
+    padding: 12px;
+    margin-bottom: 5px;
+    width: calc(100% - 10px);
+    max-width: 100vw;
+  }
+
+  .game-header h1 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+  }
+
+  .game-header p {
+    font-size: 0.85em;
+  }
+
+  .game-header {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 5px;
+  }
+
+  .game-container {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .game-header h1 {
+    font-size: 1.3em;
+  }
+
+  .game-header p {
+    font-size: 0.85em;
+  }
+}

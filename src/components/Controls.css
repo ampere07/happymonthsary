@@ -1,0 +1,100 @@
+.controls-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.controls-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.controls-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.control-button {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 3px solid white;
+  border-radius: 15px;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.control-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #5568d3 0%, #653993 100%);
+}
+
+.control-button:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #653993 100%);
+}
+
+/* Add some spacing for the center button placeholder */
+.controls-row:first-child {
+  margin-bottom: 5px;
+}
+
+.controls-row:last-child {
+  margin-top: 5px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 480px) {
+  .controls-container {
+    bottom: 20px;
+  }
+
+  .control-button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8em;
+    border: 2px solid white;
+  }
+
+  .controls-grid {
+    gap: 8px;
+  }
+
+  .controls-row {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .controls-container {
+    bottom: 15px;
+  }
+
+  .control-button {
+    width: 55px;
+    height: 55px;
+    font-size: 1.6em;
+  }
+
+  .controls-grid {
+    gap: 6px;
+  }
+
+  .controls-row {
+    gap: 6px;
+  }
+}

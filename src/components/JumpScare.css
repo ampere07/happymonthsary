@@ -1,0 +1,28 @@
+.jumpscare-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: scareFlash 0.5s infinite;
+}
+
+@keyframes scareFlash {
+  0%, 100% { 
+    filter: brightness(1); 
+  }
+  50% { 
+    filter: brightness(1.5); 
+  }
+}
+
+.jumpscare-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
